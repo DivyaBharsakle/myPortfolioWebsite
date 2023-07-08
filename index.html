@@ -19,7 +19,8 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
+      justify-content: flex-start;
+      position: fixed; /* Lock the sidebar in place */
     }
     
     .sidebar img {
@@ -32,6 +33,7 @@
     .content {
       flex: 1;
       padding: 20px;
+      margin-left: 200px; /* Offset for the fixed sidebar */
     }
     
     .compartment {
@@ -39,86 +41,60 @@
       padding: 20px;
       margin-bottom: 20px;
     }
-    
-    /* IDs for navigation */
+
+    /* Updated styles for colorful buttons */
+    .sidebar a {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      text-align: center;
+      color: #fff;
+      text-decoration: none;
+      background-color: #ccc;
+      border-radius: 5px;
+    }
+
     #compartment1 {
-      background-color: #ffcccc;
+      background-color: #ff3366;
     }
     
     #compartment2 {
-      background-color: #ccffcc;
+      background-color: #33cc33;
     }
     
     #compartment3 {
-      background-color: #ccccff;
+      background-color: #3366ff;
     }
     
     #compartment4 {
-      background-color: #ffffcc;
+      background-color: #ffff66;
     }
 
     #compartment5 {
-      background-color: #ffcccc;
+      background-color: #ff6666;
     }
 
     #compartment6 {
-      background-color: #ccffcc;
+      background-color: #66ff66;
     }
 
     #compartment7 {
-      background-color: #ccccff;
-    }
-
-    /* Updated styles for photos */
-    .work img,
-    .skills img,
-    .hobbies img,
-    .certificates img {
-      width: 250px;
-      height: 150px;
-      object-fit: cover;
-      margin-bottom: 10px;
-    }
-
-    /* Animation for photo strip */
-    @keyframes photo-strip {
-      0% {
-        transform: translateX(0);
-      }
-      100% {
-        transform: translateX(calc(-250px * 4)); /* Adjust the number of photos */
-      }
-    }
-
-    .work,
-    .skills,
-    .hobbies,
-    .certificates {
-      overflow: hidden;
-      position: relative;
-    }
-
-    .work img,
-    .skills img,
-    .hobbies img,
-    .certificates img {
-      display: inline-block;
-      position: relative;
-      animation: photo-strip 10s linear infinite; /* Adjust the animation duration */
+      background-color: #6666ff;
     }
   </style>
 </head>
 <body>
-   <div class="container">
+  <div class="container">
     <div class="sidebar">
       <img src="Profile photo.jpeg" alt="Circular Photo">
-      <a href="#compartment1">Introduction</a>
-      <a href="#compartment2">Education</a>
-      <a href="#compartment3">Work</a>
-      <a href="#compartment4">Skills</a>
-      <a href="#compartment5">Hobbies</a>
-      <a href="#compartment6">Certificates</a>
-      <a href="#compartment7">Contact</a>
+      <a href="#compartment1" id="btn-compartment1">Introduction</a>
+      <a href="#compartment2" id="btn-compartment2">Education</a>
+      <a href="#compartment3" id="btn-compartment3">Work</a>
+      <a href="#compartment4" id="btn-compartment4">Skills</a>
+      <a href="#compartment5" id="btn-compartment5">Hobbies</a>
+      <a href="#compartment6" id="btn-compartment6">Certificates</a>
+      <a href="#compartment7" id="btn-compartment7">Contact</a>
     </div>
     <div class="content">
       <div class="introduction" id="compartment1">
