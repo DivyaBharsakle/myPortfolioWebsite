@@ -1,236 +1,135 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html>
 <head>
-  <title>My Portfolio</title>
+  <title>Digital Portfolio</title>
   <style>
-    /* CSS styles for the navigation bar */
-    #navbar {
-      background-color: #333;
-      overflow: hidden;
-      position: fixed;
-      top: 0;
-      width: 100%;
+    body {
+      margin: 0;
+      padding: 0;
     }
-
-    #navbar a {
-      float: left;
-      color: #fff;
-      text-align: center;
-      padding: 14px 16px;
-      text-decoration: none;
-      font-size: 18px;
+    
+    .container {
+      display: flex;
     }
-
-    /* CSS styles for the content sections */
-    #content {
-      margin-top: 70px; /* To prevent content from being hidden behind the navbar */
+    
+    .sidebar {
+      background-color: #f2f2f2;
+      width: 200px;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .sidebar img {
+      width: 150px; /* Increased size */
+      height: 200px; /* Increased size */
+      border-radius: 50%;
+      margin-bottom: 20px;
+    }
+    
+    .content {
+      flex: 1;
       padding: 20px;
     }
-    #content h1 {
-      font-size: 24px; /* Increase the font size for section headings */
+    
+    .compartment {
+      background-color: #e6e6e6;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+    
+    /* IDs for navigation */
+    #compartment1 {
+      background-color: #ffcccc;
+    }
+    
+    #compartment2 {
+      background-color: #ccffcc;
+    }
+    
+    #compartment3 {
+      background-color: #ccccff;
+    }
+    
+    #compartment4 {
+      background-color: #ffffcc;
     }
 
-    #content h3 {
-      font-size: 18px; /* Increase the font size for subheadings */
+    #compartment5 {
+      background-color: #ffcccc;
     }
 
-    #content p {
-      font-size: 16px; /* Increase the font size for paragraph text */
+    #compartment6 {
+      background-color: #ccffcc;
     }
 
-    /* CSS styles for the footer */
-    #footer {
-      background-color: #333;
-      color: #fff;
-      text-align: center;
-      padding: 10px;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-    }
-
-    /* CSS styles for the image animations */
-    .image-strip {
-      overflow: hidden;
-      white-space: nowrap;
-    }
-
-    .image-strip img {
-      display: inline-block;
-      animation: marquee 20s linear infinite;
-      margin-right: 20px;
-      max-width: 200px; /* Decrease the maximum width of the images */
-    }
-
-    @keyframes marquee {
-      0% { transform: translateX(100%); }
-      100% { transform: translateX(-100%); }
-  </style>
-</head>
-<body>
-  <div id="navbar">
-    <a href="#intro">Introduction</a>
-    <a href="#education">Education</a>
-    <a href="#skills">Skills</a>
-    <a href="#hobbies">Hobbies</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact Details</a>
-  </div>
-  <style>
-    .container {
-      text-align: center;
-    }
-
-    .circle-photo {
-      width: 200px;
-      height: 200px;
-      border-radius: 50%;
-      overflow: hidden;
-      display: inline-block;
-      margin-bottom: 10px;
-    }
-
-    .circle-photo img {
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-    }
-
-    .motto {
-      font-size: 18px;
+    #compartment7 {
+      background-color: #ccccff;
     }
   </style>
 </head>
 <body>
-
-  
-  
   <div class="container">
-    <div class="circle-photo">
-      <img src="Profile photo.jpeg" alt="Profile Photo">
+    <div class="sidebar">
+      <img src="Profile photo.jpeg" alt="Circular Photo">
+      <a href="#compartment1">Introduction</a>
+      <a href="#compartment2">Education</a>
+      <a href="#compartment3">Work</a>
+      <a href="#compartment4">Skills</a>
+      <a href="#compartment5">Hobbies</a>
+      <a href="#compartment6">Certificates</a>
+      <a href="#compartment7">Contact</a>
     </div>
-    <h1>Divya Ganesh Bharsakle</h1>
-  </div>
-  <div id="content">
-    <section id="home">
-      <h1>WELCOME !<h1>
-    </section>
+    <div class="content">
+      <div class="introduction" id="compartment1">
+        <h2>Introduction</h2>
+        <p>I, Divya, thank you for taking interest in my portfolio.</p>
+        <p> I am a proud MITian pursuing the degree of Civil Engineering at MIT Academy of Engineering, Pune.</p>   
+      </div>
+      <div class="education" id="compartment2">
+        <h2>Education</h2>
+        <p>[ Xth ] School: Noel English High School</p>
+        <img src="High school.jpg" alt="High School">
 
-    <section id="introduction">
-      <h1>Introduction</h1>
-      <h3>Greetings Visitors</h3>
-      <h3>I, Divya, thank you for taking interest in my portfolio.</h3>
-      <h3>I am a proud MITian pursuing the degree of Civil Engineering at MIT Academy of Engineering, Pune.</h3>
-    </section>
+        <p>[ XIIth] Junior College: Late Jyoti Janolkar College</p>
+        <img src="Junior college.jpg" alt="Junior College">
 
+        <p>Current: MIT Academy of Engineering</p>
+        <p>Pursuing: Civil Engineering B Tech</p>
+        <img src="College.jpg" alt="College">
+      </div>
+      <div class="work" id="compartment3">
+        <h2>Work</h2>
+        <p>1. Snake Bot</p>
+        <p>A remote contol snake bot with beads as a moving mechanism for exploring grounds.</p>
+        <p>Materials used: Switch, Battery, Circuit, Capacitor, cable, Arduino, camera, Electric wire chain, cardboard, nut bolt, Motors, etc.</p>
+         <img src="Pr1.jpeg" alt="College">
+     
+    </div>
+      <div class="skills" id="compartment4">
+        <h2>SKills</h2>
+        <p>1.Photography</p>
+        <p>2.Fusion</p>
 
+      </div>
+      <div class="hobbies" id="compartment5">
+        <h2>Hobbies</h2>
+        <p>Arts and Crafts</p>
+
+      </div>
+      <div class="certificates" id="compartment6">
+        <h2>Certificates</h2>
         
-    <section id="education">
-      <h1>Education</h1>
-      <h3>[ Xth ] School: Noel English High School</h3>
-      <div class="image-strip">
-        <img src="High school.jpg" alt=".">
       </div>
-
-      <h3>[ XIIth] Junior College: Late Jyoti Janolkar College</h3>
-      <div class="image-strip">
-        <img src="Junior college.jpg" alt=".">
+      <div class="contact" id="compartment7">
+        <h2>Conatct</h2>
+        <p>Phone no: 8600315417</p>
+        <p>Email id: divya.bharsakle@mitaoe.ac.in</p>
+        <p>Linkedin: https://www.linkedin.com/in/divya-bharsakle-037a5725b</p>
       </div>
-
-      <h3>Current: MIT Academy of Engineering</h3>
-      <h3>Pursuing: Civil Engineering B Tech</h3>
-      <div class="image-strip">
-        <img src="College.jpg" alt=".">
-      </div>
-    </section>
-
-
-        
-    <section id="skills">
-      <h1>Skills</h1>
-
-      <h1>I] Photography</h1>
-      <div class="image-strip">
-        <img src="P1.jpeg" alt=".">
-        <img src="P2.jpeg" alt=".">
-        <img src="P3.jpeg" alt=".">
-        <img src="P4.jpeg" alt=".">
-        <img src="P5.jpeg" alt=".">
-        <img src="P6.jpeg" alt=".">
-        <img src="P7.jpeg" alt=".">
-        <img src="P8.jpeg" alt=".">
-        <img src="P9.jpeg" alt=".">
-        <img src="T.jpeg" alt=".">
-      </div>
-
-      
-
-      <h1>II] 3D Modeling</h1>
-      <div class="image-strip">
-        <img src="model1.png" alt=".">
-        <img src="Model2.png" alt=".">
-        <img src="Model3.png" alt=".">
-        <img src="Model4.png" alt=".">
-        <img src="Model5.png" alt=".">
-        <img src="Model6.png" alt=".">
-        <img src="Model7.png" alt=".">
-        <img src="Model8.png" alt=".">
-        <img src="Model9.png" alt=".">
-        <img src="Model10.png" alt=".">
-        <img src="MOdel11.png" alt=".">
-        <img src="W1.jpeg" alt=".">
-      </div>
-    </section>
-
-
-        
-    <section id="hobbies">
-      <h1>Hobbies</h1>
-
-      <h1>Arts And Craft</h1>
-      <div class="image-strip">
-      <img src="A4.jpeg" alt=".">
-      <img src="A5.jpeg" alt=".">
-      <img src="A3.jpeg" alt=".">
-      <img src="A2.jpeg" alt=".">
-      <img src="J1.jpeg" alt=".">
-      <img src="A1.jpeg" alt=".">
-      <img src="Calligraphy.png" alt=".">
-      <img src="Crafts.png" alt=".">
-      <img src="Ra1.jpeg" alt=".">
-      <img src="MirrorArt.jpeg" alt=".">
-      </div>
-    </section>
-
-
-        
-    <section id="projects">
-      <h1>Projects</h1>
-      <h3>Snake Bot</h3>
-      <h3>A snake bot with carved beads as a moving mechanism for exploring grounds.</h3>
-      <h3>Materials used: Switch, Battery, Circuit, Capacitor, cable, Arduino, camera, Electric wire chain, cardboard, nut bolt, Motors, etc.</h3>
-      <div class="image-strip">
-        <img src="Pr.jpeg" alt=".">
-        <img src="Pr1.jpeg" alt=".">
-        <img src="Pr2.jpeg" alt=".">
-        <img src="Pr3.jpeg" alt=".">
-      </div>
-    </section>
-
-
-        
-    <section id="contact">
-      <h1>Contact</h1>
-      <p>Phone no: 8600315417</p>
-      <p>Email id: divya.bharsakle@mitaoe.ac.in</p>
-      <p>Linkedin: <a href="https://www.linkedin.com/in/divya-bharsakle-037a5725b">https://www.linkedin.com/in/divya-bharsakle-037a5725b</a></p>
-    </section>
-  </div>
-
-
-        
-  <div id="footer">
-    &copy; 2023 My Portfolio. All rights reserved.
+    </div>
   </div>
 </body>
 </html>
