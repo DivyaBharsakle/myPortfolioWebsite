@@ -69,22 +69,14 @@
       background-color: #ccccff;
     }
 
-    /* Updated styles for photos */
+ /* Updated styles for photos */
     .work img,
     .skills img,
     .hobbies img,
     .certificates img {
-      width: 250px;
-      height: 150px;
-      object-fit: cover;
-      margin-right: 10px;
-      animation: photo-strip 15s linear infinite;
-    }
-
-    /* Animation for photo strip */
-    @keyframes photo-strip {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-100%); }
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 10px;
     }
   </style>
 </head>
