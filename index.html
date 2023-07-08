@@ -69,14 +69,42 @@
       background-color: #ccccff;
     }
 
- /* Updated styles for photos */
+    /* Updated styles for photos */
     .work img,
     .skills img,
     .hobbies img,
     .certificates img {
-      max-width: 100%;
-      height: auto;
+      width: 250px;
+      height: 150px;
+      object-fit: cover;
       margin-bottom: 10px;
+    }
+
+    /* Animation for photo strip */
+    @keyframes photo-strip {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(calc(-250px * 4)); /* Adjust the number of photos */
+      }
+    }
+
+    .work,
+    .skills,
+    .hobbies,
+    .certificates {
+      overflow: hidden;
+      position: relative;
+    }
+
+    .work img,
+    .skills img,
+    .hobbies img,
+    .certificates img {
+      display: inline-block;
+      position: relative;
+      animation: photo-strip 10s linear infinite; /* Adjust the animation duration */
     }
   </style>
 </head>
@@ -142,6 +170,8 @@
         <p>Email id: divya.bharsakle@mitaoe.ac.in</p>
         <p>Linkedin: https://www.linkedin.com/in/divya-bharsakle-037a5725b</p>
       </div>
+      </body>
+</html>
     </div>
   </div>
 </body>
