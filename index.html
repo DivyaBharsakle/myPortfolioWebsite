@@ -19,8 +19,11 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: flex-start;
-      position: fixed; /* Lock the sidebar in place */
+      justify-content: center;
+      position: fixed; /* Added property */
+      top: 0; /* Added property */
+      left: 0; /* Added property */
+      bottom: 0; /* Added property */
     }
     
     .sidebar img {
@@ -30,66 +33,45 @@
       margin-bottom: 20px;
     }
     
+    .content {
+      flex: 1;
+      padding: 20px;
+      margin-left: 200px; /* Added property */
+    }
+    
     .compartment {
       background-color: #e6e6e6;
       padding: 20px;
       margin-bottom: 20px;
     }
-
-    /* Updated styles for colorful buttons */
-    .sidebar a {
-      display: block;
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 10px;
-      text-align: center;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 5px;
-    }
-    .work img,
-  .skills img,
-  .hobbies img,
-  .certificates img {
-    width: 250px;
-    height: 150px;
-    object-fit: cover;
-    margin-bottom: 10px;
-  }
-
-  .work p,
-  .skills p,
-  .hobbies p,
-  .certificates p {
-    font-size: 14px; /* Adjust the font size as needed */
-  }
-
+    
+    /* IDs for navigation */
     #compartment1 {
-      background-color: #ff3366;
+      background-color: #ffcccc;
     }
     
     #compartment2 {
-      background-color: #33cc33;
+      background-color: #ccffcc;
     }
     
     #compartment3 {
-      background-color: #3366ff;
+      background-color: #ccccff;
     }
     
     #compartment4 {
-      background-color: #ffff66;
+      background-color: #ffffcc;
     }
 
     #compartment5 {
-      background-color: #ff6666;
+      background-color: #ffcccc;
     }
 
     #compartment6 {
-      background-color: #66ff66;
+      background-color: #ccffcc;
     }
 
     #compartment7 {
-      background-color: #6666ff;
+      background-color: #ccccff;
     }
   </style>
 </head>
@@ -97,13 +79,13 @@
   <div class="container">
     <div class="sidebar">
       <img src="Profile photo.jpeg" alt="Circular Photo">
-      <a href="#compartment1" id="btn-compartment1">Introduction</a>
-      <a href="#compartment2" id="btn-compartment2">Education</a>
-      <a href="#compartment3" id="btn-compartment3">Work</a>
-      <a href="#compartment4" id="btn-compartment4">Skills</a>
-      <a href="#compartment5" id="btn-compartment5">Hobbies</a>
-      <a href="#compartment6" id="btn-compartment6">Certificates</a>
-      <a href="#compartment7" id="btn-compartment7">Contact</a>
+      <a href="#compartment1">Introduction</a>
+      <a href="#compartment2">Education</a>
+      <a href="#compartment3">Work</a>
+      <a href="#compartment4">Skills</a>
+      <a href="#compartment5">Hobbies</a>
+      <a href="#compartment6">Certificates</a>
+      <a href="#compartment7">Contact</a>
     </div>
     <div class="content">
       <div class="introduction" id="compartment1">
@@ -123,27 +105,44 @@
         <p>Pursuing: Civil Engineering B Tech</p>
         <img src="College.jpg" alt="College">
       </div>
+      <!-- Compartment 3 -->
       <div class="work" id="compartment3">
         <h2>Work</h2>
         <p>1. Snake Bot</p>
-        <p>A remote contol snake bot with beads as a moving mechanism for exploring grounds.</p>
+        <p>A remote control snake bot with beads as a moving mechanism for exploring grounds.</p>
         <p>Materials used: Switch, Battery, Circuit, Capacitor, cable, Arduino, camera, Electric wire chain, cardboard, nut bolt, Motors, etc.</p>
-         <img src="Pr1.jpeg" alt="work sample1"><img src="Pr2.jpeg" alt="work sample2"><img src="Pr3.jpeg" alt="work sample3"><img src="SNAKE BOT !.jpg" alt="work sample4">
-         
+        <img src="Pr1.jpeg" alt="work sample1" style="width: 150px; height: auto;">
+        <img src="Pr2.jpeg" alt="work sample2" style="width: 150px; height: auto;">
+        <img src="Pr3.jpeg" alt="work sample3" style="width: 150px; height: auto;">
+        <img src="PSNAKE BOT !.jpg" alt="work sample4" style="width: 150px; height: auto;">
+               
         <p>2. Drone</p>
-        <img src="Final Drone.jpg" alt="work sample1"><img src="Dro.jpg" alt="work sample1">
-     
-    </div>
-      <div class="skills" id="compartment4">
-        <h2>SKills</h2>
-        <p>1.Photography</p>
-        <p>2.Fusion</p>
-         <img src="P1.jpeg" alt="."> <img src="P2.jpeg" alt="."><img src="P9.jpeg" alt="."><img src="Model6.png" alt="."> <img src="Model3.png" alt="."><img src="Model4.png" alt="."> <img src="Model2.png" alt=".">
+        <img src="Final Drone.jpg" alt="work sample1" style="width: 150px; height: auto;">
+        <img src="Dro.jpg" alt="work sample1" style="width: 150px; height: auto;">
       </div>
+
+      <!-- Compartment 4 -->
+      <div class="skills" id="compartment4">
+        <h2>Skills</h2>
+        <p>1. Photography</p>
+        <p>2. Fusion</p>
+        <img src="P1.jpeg" alt="." style="width: 150px; height: auto;">
+        <img src="P2.jpeg" alt="." style="width: 150px; height: auto;">
+        <img src="P9.jpeg" alt="." style="width: 150px; height: auto;">
+        <img src="Model6.png" alt="." style="width: 150px; height: auto;">
+        <img src="Model3.png" alt="." style="width: 150px; height: auto;">
+        <img src="Model4.png" alt="." style="width: 150px; height: auto;">
+        <img src="Model2.png" alt="." style="width: 150px; height: auto;">
+      </div>
+
+      <!-- Compartment 5 -->
       <div class="hobbies" id="compartment5">
         <h2>Hobbies</h2>
         <p>Arts and Crafts</p>
-        <img src="A1.jpeg" alt="."> <img src="A4.jpeg" alt="."><img src="A2.jpeg" alt="."> <img src="A3.jpeg" alt=".">
+        <img src="A1.jpeg" alt="." style="width: 150px; height: auto;">
+        <img src="A4.jpeg" alt="." style="width: 150px; height: auto;">
+        <img src="A2.jpeg" alt="." style="width: 150px; height: auto;">
+        <img src="A3.jpeg" alt="." style="width: 150px; height: auto;">
       </div>
       <div class="certificates" id="compartment6">
         <h2>Certificates</h2>
@@ -152,11 +151,9 @@
       <div class="contact" id="compartment7">
         <h2>Conatct</h2>
         <p>Phone no: 8600315417</p>
-        <p>Email id: divya.bharsakle@mitaoe.ac.in</p>
+        <p>Email id: divya.bharsakle@mitaoe.ac.in
         <p>Linkedin: https://www.linkedin.com/in/divya-bharsakle-037a5725b</p>
       </div>
-      </body>
-</html>
     </div>
   </div>
 </body>
